@@ -1,0 +1,11 @@
+#logoBlock{
+  position: fixed;
+  margin: 30%;
+}
+
+#topCorner{
+  display: block;
+  position: fixed;
+  margin-left: 10px;
+  margin-top: 10px;
+}
