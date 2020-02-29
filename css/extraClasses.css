@@ -1,0 +1,21 @@
+#logoBlock{
+  position: fixed;
+  /* margin: 10%; */
+  margin-top: 40%;
+  margin-left: 40%;
+}
+
+#topCorner{
+  display: block;
+  position: fixed;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#demo{
+  font-family: "Garamond", "Times", serif;
+  position: absolute;
+  /* margin: 10%; */
+  margin-top: 40%;
+  margin-left: 40%;
+}

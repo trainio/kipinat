@@ -2,20 +2,43 @@
 <html>
 <head>
 <meta charset='UTF-8'>
-<script src="js/parse.js"></script>
- kehitys
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style src="css/default-style.css">
-<style src="css/extra-classes.css">
+<link rel="stylesheet" type="text/css" href="css/defaultStyle.css">
+<link rel="stylesheet" type="text/css" href="css/extraClasses.css">
+<script src="js/parserClass.js"></script>
+
 </head>
 
 <body>
-  <a href="http://www.tuomorainio.fi/havainto/">
-    <p id="topCorner">wiki pages</p>
-    </a>
+
+<!-- link menu -->
+<p id="topCorner">
+  <a href="http://www.tuomorainio.fi/havainto/">wiki</a>
+  |
+  <a href="http://www.tuomorainio.fi/havainto/">other things</a>
+  |
+  <a href="http://www.tuomorainio.fi/havainto/">some more things</a>
+</p>
+
+<!-- images -->
 <div id="logoBlock">
-<img src="http://www.tuomorainio.fi/havainto-materiaalit/logo.svg" alt="Logo" style="width:80%;">
+<img src="http://www.tuomorainio.fi/havainto-materiaalit/logo.svg" alt="Logo" style="width:50%;height:20%">
 </div>
+
+<p id="demo"></p>
+
+<script>
+var params = {
+    action: "parse",
+    format: "json",
+    page: "Havaintoja_maailmasta",
+    prop: "wikitext",
+    formatversion: "2"
+};
+myParser = new MediaWikiParser("http://tuomorainio.fi/havainto/api.php", params);
+myParser.hello();
+document.getElementById("demo").innerHTML = myParser.parseOutput();
+</script>
 
 </body>
 </html>
