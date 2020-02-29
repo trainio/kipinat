@@ -22,8 +22,14 @@
 
 <!-- images -->
 <div id="logoBlock">
-<!-- TODO: svg image not working on Firefox for some reason   -->
-<img src="http://www.tuomorainio.fi/havainto-materiaalit/logo.svg" alt="Logo" style="width:50%;height:20%">
+<!-- TODO: svg image not working on Firefox for some reason . WORKS On: Brave  -->
+<!-- <img src="http://www.tuomorainio.fi/havainto-materiaalit/logo.svg" alt="Logo" style="width:50%;height:20%"> -->
+
+<picture>
+ <source media="(min-width: 650px)" srcset="http://www.tuomorainio.fi/havainto-materiaalit/logo.svg">
+ <source media="(min-width: 465px)" srcset="http://www.tuomorainio.fi/havainto-materiaalit/logo.svg">
+ <img alt="Logo" style="width:50%;height:20%" src="http://www.tuomorainio.fi/havainto-materiaalit/logo.svg">
+</picture>
 </div>
 
 <p id="demo"></p>
