@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html>
+<head>
 <meta charset='UTF-8'>
 <script src="js/parse.js"></script>
 </head>
 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#logoBlock{
+  position: fixed;
+  margin: 30%;
+}
+
+p {
+  font-family: "Helvetica", arial, serif;
+  font-size: 12px;
+  color: black;
+
+  }
+a {
+  color: black;
+  text-decoration: none;
+}
+   /* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+#topCorner{
+  display: block;
+  position: fixed;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+</style>
+</head>
 <body>
-Hello Yellow
+  <a href="http://www.tuomorainio.fi/havainto/">
+    <p id="topCorner">wiki pages</p>
+    </a>
+<div id="logoBlock">
+<img src="http://www.tuomorainio.fi/havainto-materiaalit/logo.svg" alt="Logo" style="width:80%;">
+</div>
 
 </body>
 </html>
