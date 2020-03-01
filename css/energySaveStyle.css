@@ -1,5 +1,10 @@
 
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
 /* basics style settings */
+html{
+  background-color: black;
+}
 
 img {
   position: relative;
@@ -8,27 +13,27 @@ img {
   margin-right: auto;
 }
 p {
-  font-family: "Helvetica", arial, serif;
-  font-size: 12px;
-  color: black;
+  font-family: "Raleway","Helvetica", arial, serif;
+  font-size: 11px;
+  color: grey;
 }
 .leipis {
-  font-family: "Helvetica", arial, serif;
-  font-size: 14px;
-  color: black;
+  font-family: "Raleway","Helvetica", arial, serif;
+  font-size: 13px;
+  color: grey;
 }
 a {
-  color: black;
+  color: grey;
   text-decoration: none;
 }
 /* unvisited link */
 a:link {
-  color: black;
+  color: grey;
 }
 
 /* visited link */
 a:visited {
-  color: black;
+  color: grey;
 }
 /* mouse over link */
 a:hover {
@@ -37,7 +42,7 @@ a:hover {
 
 /* selected link */
 a:active {
-  color: black;
+  color: grey;
 }
 
 /* useful custom classes */

@@ -3,7 +3,7 @@
 <head>
 <meta charset='UTF-8'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/defaultStyle.css">
+<link rel="stylesheet" type="text/css" href="css/energySaveStyle.css">
 <link rel="stylesheet" type="text/css" href="css/extraClasses.css">
 <script src="js/parseHavaintoMainPage.js"></script>
 </head>
@@ -13,10 +13,10 @@
 <body>
 
  <!-- background video -->
-<video autoplay muted loop id="backgroundVideo">
+<!-- <video autoplay muted loop id="backgroundVideo">
   <source src="http://www.tuomorainio.fi/havainto-materiaalit/moving-dots-1920x1080.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
-</video>
+</video> -->
 
 <!-- link menu -->
 <p id="topCorner">
@@ -27,14 +27,14 @@
   <a href="http://www.tuomorainio.fi/havainto/">some more things</a>
   |
   <!-- here the user can invert the inteface colors -->
-  <a href="black-index.html">save energy</a>
+  <a href="index.html">waste energy</a>
 </p>
 
 <!-- images -->
 <div id="logoBlock">
 <!-- TODO: svg image not working on Firefox for some reason . WORKS On: Brave  -->
 <!-- <img src="http://www.tuomorainio.fi/havainto-materiaalit/logo.svg" alt="Logo" style="width:50%;height:20%"> -->
-<img id="myBtn" onclick="myFunction()" src="http://www.tuomorainio.fi/havainto-materiaalit/logo.png" alt="Logo" style="width:33%;height:16%">
+<img  onclick="pause()" src="http://www.tuomorainio.fi/havainto-materiaalit/logo-white.svg" alt="Logo" style="width:50%;height:20%">
 </div>
 
 <img src="http://www.tuomorainio.fi/havainto-materiaalit/korva.svg" alt="Logo" style="width:10%;height:20%;margin-right:50px;">
@@ -46,7 +46,7 @@
 </picture>
 -->
 
-<p class="leipis" id="demo"></p>
+<p class="leipis" id="demo" onmouseover="rotate()"></p>
 
 <!-- <script>
 var params = {
@@ -61,20 +61,50 @@ myParser.hello();
 document.getElementById("demo").innerHTML = myParser.parseOutput();
 </script> -->
 
+<script>
+var demoText = document.getElementById("demo");
+var r = -20;
+var isRunning = true;
+function rotate() {
+
+  // Code for IE9
+  document.getElementById("demo").style.msTransform = "rotate("+r+"deg)";
+  // Standard syntax
+  document.getElementById("demo").style.transform = "rotate("+r+"deg)";
+
+setInterval(function(){
+  // Code for IE9
+  document.getElementById("demo").style.msTransform = "rotate("+r+"deg)";
+  // Standard syntax
+  document.getElementById("demo").style.transform = "rotate("+r+"deg)";
+  if(isRunning){
+    r=r+1;
+  } else {
+    r = 0;
+  }
+}, 50) // run code every 50 milliseconds
+function pause(){
+  isRunning=false;
+  r=0;
+}
+
+}
+
+
+</script>
 
 <!-- background video script-->
 <script>
 var video = document.getElementById("backgroundVideo");
-var btn = document.getElementById("myBtn");
-video.pause();
+// var btn = document.getElementById("myBtn");
 
 function myFunction() {
   if (video.paused) {
     video.play();
-  //  btn.innerHTML = "Pause";
+    // btn.innerHTML = "Pause";
   } else {
     video.pause();
-  // btn.innerHTML = "Play";
+    // btn.innerHTML = "Play";
   }
 }
 </script>

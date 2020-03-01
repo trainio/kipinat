@@ -13,11 +13,12 @@
 }
 
 #demo{
-  font-family: "Garamond", "Times", serif;
+  color: white;
   position: absolute;
   /* margin: 10%; */
-  margin-top: 40%;
+  margin-top: 20%;
   margin-left: 40%;
+  transform: rotate(-20deg);
 }
 
 #backgroundVideo {
