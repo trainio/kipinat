@@ -2,7 +2,7 @@
 
 
 
-var url = "http://tuomorainio.fi/havainto/api.php";
+var url = "https://tuomorainio.fi/havainto/api.php";
 
 var params = {
     action: "parse",
