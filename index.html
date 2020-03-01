@@ -46,7 +46,7 @@
 </picture>
 -->
 
-<p class="leipis" id="demo" style="color:black"></p>
+<p class="leipis" id="demo" onmouseover="rotate()" style="color:black"></p>
 
 <!-- <script>
 var params = {
@@ -77,6 +77,38 @@ function myFunction() {
   // btn.innerHTML = "Play";
   }
 }
+</script>
+ 
+ <script>
+var demoText = document.getElementById("demo");
+var r = -20;
+var isRunning = true;
+function rotate() {
+
+  // Code for IE9
+  document.getElementById("demo").style.msTransform = "rotate("+r+"deg)";
+  // Standard syntax
+  document.getElementById("demo").style.transform = "rotate("+r+"deg)";
+
+setInterval(function(){
+  // Code for IE9
+  document.getElementById("demo").style.msTransform = "rotate("+r+"deg)";
+  // Standard syntax
+  document.getElementById("demo").style.transform = "rotate("+r+"deg)";
+  if(isRunning){
+    r=r+1;
+  } else {
+    r = 0;
+  }
+}, 50) // run code every 50 milliseconds
+function pause(){
+  isRunning=false;
+  r=0;
+}
+
+}
+
+
 </script>
 
 </body>
